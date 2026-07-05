@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Israel Olumuyiwa — Direct Response Copywriter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16140f;
+    --paper: #f2ede2;
+    --paper-dim: #e8e1d2;
+    --rust: #c1502e;
+    --rust-dark: #9c3d22;
+    --moss: #565f45;
+    --line: rgba(22, 20, 15, 0.14);
+    --line-strong: rgba(22, 20, 15, 0.28);
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+background: var(–paper);
+color: var(–ink);
+font-family: ‘Space Grotesk’, sans-serif;
+line-height: 1.5;
+overflow-x: hidden;
+}
+
+::selection { background: var(–rust); color: var(–paper); }
+
+.wrap {
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 32px;
+}
+
+@media (max-width: 640px) {
+.wrap { padding: 0 20px; }
+}
+
+a { color: inherit; }
+
+.eyebrow {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: var(–rust-dark);
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.eyebrow::before {
+content: ‘’;
+width: 22px;
+height: 1px;
+background: var(–rust-dark);
+display: inline-block;
+}
+
+h1, h2, h3 {
+font-family: ‘Fraunces’, serif;
+font-weight: 500;
+letter-spacing: -0.01em;
+}
+
+/* NAV */
+nav {
+position: sticky;
+top: 0;
+z-index: 50;
+background: rgba(242, 237, 226, 0.86);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid var(–line);
+}
+nav .wrap {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 68px;
+}
+.nav-name {
+font-family: ‘Fraunces’, serif;
+font-weight: 600;
+font-size: 17px;
+}
+.nav-name span { color: var(–rust); }
+.nav-cta {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+border: 1px solid var(–ink);
+padding: 9px 18px;
+border-radius: 999px;
+text-decoration: none;
+transition: all 0.2s ease;
+white-space: nowrap;
+}
+.nav-cta:hover { background: var(–ink); color: var(–paper); }
+
+/* HERO */
+.hero {
+padding: 100px 0 90px;
+position: relative;
+}
+.hero-grid {
+display: grid;
+grid-template-columns: 1fr auto;
+gap: 40px;
+align-items: start;
+}
+.hero-kicker {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 13px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–moss);
+margin-bottom: 28px;
+}
+h1.headline {
+font-size: clamp(42px, 7vw, 84px);
+line-height: 0.98;
+font-weight: 500;
+margin-bottom: 32px;
+}
+h1.headline em {
+font-style: italic;
+color: var(–rust);
+font-weight: 400;
+}
+.hero-sub {
+font-size: clamp(17px, 2vw, 20px);
+max-width: 560px;
+color: #3a3629;
+margin-bottom: 40px;
+}
+.hero-meta {
+display: flex;
+gap: 32px;
+flex-wrap: wrap;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+color: var(–moss);
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+.hero-meta div { display: flex; flex-direction: column; gap: 4px; }
+.hero-meta strong {
+font-family: ‘Space Grotesk’, sans-serif;
+font-size: 15px;
+color: var(–ink);
+text-transform: none;
+letter-spacing: 0;
+}
+
+.section {
+padding: 84px 0;
+border-top: 1px solid var(–line);
+}
+.section-head {
+margin-bottom: 56px;
+}
+.section-head h2 {
+font-size: clamp(30px, 4vw, 44px);
+margin-top: 14px;
+}
+
+/* WHAT I DO */
+.services {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1px;
+background: var(–line);
+border: 1px solid var(–line);
+}
+@media (max-width: 800px) {
+.services { grid-template-columns: 1fr; }
+}
+.service-card {
+background: var(–paper);
+padding: 40px 32px;
+transition: background 0.25s ease;
+}
+.service-card:hover { background: var(–paper-dim); }
+.service-num {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+color: var(–rust-dark);
+margin-bottom: 22px;
+}
+.service-card h3 {
+font-size: 21px;
+margin-bottom: 12px;
+}
+.service-card p {
+color: #4a4636;
+font-size: 15px;
+}
+
+/* ABOUT */
+.about-grid {
+display: grid;
+grid-template-columns: 260px 1fr;
+gap: 56px;
+align-items: start;
+}
+@media (max-width: 720px) {
+.about-grid { grid-template-columns: 1fr; }
+}
+.about-photo {
+aspect-ratio: 4/5;
+background: var(–paper-dim);
+border: 1px solid var(–line-strong);
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+color: var(–moss);
+text-align: center;
+padding: 20px;
+overflow: hidden;
+position: relative;
+}
+.about-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+inset: 0;
+}
+.about-text p {
+font-size: 18px;
+color: #302c20;
+margin-bottom: 22px;
+max-width: 600px;
+}
+.about-text p strong { color: var(–ink); font-weight: 600; }
+.about-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 32px;
+}
+.tag {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+border: 1px solid var(–line-strong);
+padding: 7px 14px;
+border-radius: 999px;
+color: var(–moss);
+}
+
+/* PROCESS */
+.process-list {
+display: flex;
+flex-direction: column;
+}
+.process-item {
+display: grid;
+grid-template-columns: 90px 1fr;
+gap: 28px;
+padding: 32px 0;
+border-top: 1px solid var(–line);
+align-items: baseline;
+}
+.process-item:last-child { border-bottom: 1px solid var(–line); }
+.process-index {
+font-family: ‘Fraunces’, serif;
+font-style: italic;
+font-size: 32px;
+color: var(–rust);
+}
+.process-item h3 {
+font-size: 20px;
+margin-bottom: 8px;
+}
+.process-item p {
+color: #4a4636;
+font-size: 15px;
+max-width: 520px;
+}
+
+/* LOOM */
+.loom-box {
+border: 1px dashed var(–line-strong);
+background: var(–paper-dim);
+border-radius: 4px;
+padding: 48px;
+text-align: center;
+transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+color: inherit;
+}
+.loom-box:hover {
+border-color: var(–rust);
+background: var(–paper);
+transform: translateY(-2px);
+}
+.loom-box p {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+color: var(–moss);
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+.loom-embed {
+width: 100%;
+aspect-ratio: 16/9;
+border-radius: 4px;
+overflow: hidden;
+}
+.loom-embed iframe { width: 100%; height: 100%; border: none; }
+
+/* WORK */
+.work-list {
+display: flex;
+flex-direction: column;
+gap: 1px;
+background: var(–line);
+border: 1px solid var(–line);
+}
+.work-item {
+background: var(–paper);
+padding: 36px 32px;
+display: grid;
+grid-template-columns: 120px 1fr auto;
+gap: 28px;
+align-items: center;
+transition: background 0.2s ease;
+}
+.work-item:hover { background: var(–paper-dim); }
+@media (max-width: 720px) {
+.work-item { grid-template-columns: 1fr; gap: 12px; }
+}
+.work-tag {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+color: var(–rust-dark);
+border: 1px solid var(–rust-dark);
+padding: 5px 10px;
+border-radius: 999px;
+text-align: center;
+white-space: nowrap;
+}
+.work-body h3 {
+font-size: 20px;
+margin-bottom: 6px;
+font-weight: 500;
+}
+.work-body p {
+color: #4a4636;
+font-size: 14.5px;
+}
+.work-link {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+text-decoration: none;
+border-bottom: 1px solid var(–ink);
+padding-bottom: 2px;
+white-space: nowrap;
+}
+
+/* CTA */
+.cta-section {
+padding: 110px 0 120px;
+text-align: center;
+}
+.cta-section h2 {
+font-size: clamp(34px, 6vw, 60px);
+margin-bottom: 24px;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+.cta-section h2 em { color: var(–rust); font-style: italic; }
+.cta-section p {
+color: #4a4636;
+font-size: 17px;
+margin-bottom: 40px;
+}
+.cta-button {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+background: var(–ink);
+color: var(–paper);
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 13px;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+padding: 18px 34px;
+border-radius: 999px;
+text-decoration: none;
+transition: transform 0.2s ease, background 0.2s ease;
+}
+.cta-button:hover { background: var(–rust); transform: translateY(-2px); }
+
+footer {
+border-top: 1px solid var(–line);
+padding: 32px 0;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+color: var(–moss);
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
+* { transition: none !important; }
+}
+
+/* SCROLL REVEAL */
+.reveal {
+opacity: 0;
+transform: translateY(24px);
+transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* HERO LIFE */
+.headline em {
+position: relative;
+display: inline-block;
+}
+.hero-kicker .pulse {
+display: inline-block;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: var(–rust);
+margin-right: 8px;
+position: relative;
+top: -1px;
+animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(193, 80, 46, 0.4); }
+50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(193, 80, 46, 0); }
+}
+
+.about-photo {
+transition: transform 0.4s ease;
+}
+.about-photo:hover { transform: translateY(-4px); }
+.about-photo img { transition: transform 0.5s ease, filter 0.5s ease; filter: grayscale(15%); }
+.about-photo:hover img { transform: scale(1.03); filter: grayscale(0%); }
+
+.service-card, .work-item {
+position: relative;
+}
+.service-card::before {
+content: ‘’;
+position: absolute;
+left: 0; top: 0;
+width: 3px; height: 0;
+background: var(–rust);
+transition: height 0.3s ease;
+}
+.service-card:hover::before { height: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+.reveal { opacity: 1; transform: none; }
+.pulse { animation: none; }
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name">Israel <span>Olumuyiwa</span></div>
+    <a href="mailto:israelolumuyiw@gmail.com" class="nav-cta">Let's Talk</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-kicker"><span class="pulse"></span>Direct Response Copywriter — Lagos, Nigeria · Open for Remote Roles</div>
+      <h1 class="headline">Words that<br><em>convert.</em><br>Strategy that thinks.</h1>
+      <p class="hero-sub">I help DTC brands increase revenue through direct-response copy and creatives. Email, ads, and full creative breakdowns built on real market psychology, not guesswork.</p>
+      <div class="hero-meta">
+        <div><strong>DTC & Supplements</strong>Primary focus</div>
+        <div><strong>Emails · Ads · Funnels</strong>What I write</div>
+        <div><strong>2–3 slots</strong>Currently taking on</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="what-i-do">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What I Do</div>
+      <h2>Three ways I move product.</h2>
+    </div>
+    <div class="services reveal">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Direct Response Copy</h3>
+        <p>Sales pages, VSLs, and landing pages engineered to turn cold traffic into buyers — built on awareness level, not vibes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Email Sequences</h3>
+        <p>Welcome flows, launch sequences, and retention campaigns designed to do the quiet, compounding work of turning subscribers into repeat buyers.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Creative Strategy</h3>
+        <p>Positioning, messaging hierarchy, and ad direction pulled from a real audit of your market — not a template.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">About Me</div>
+      <h2>Israel Olumuyiwa</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-photo">
+        <img src="photo.jpg" alt="Israel Olumuyiwa">
+      </div>
+      <div class="about-text">
+        <p>I'm a direct-response copywriter and creative strategist based in Lagos, specializing in <strong>DTC ecommerce and health/wellness supplement brands.</strong></p>
+        <p>Before I write a word, I ask what a salesperson would ask: who is this customer, what do they already believe, and what's stopping them from buying right now. That's the lens — market sophistication, awareness level, the actual mechanism behind the claim — not just "does this sound good."</p>
+        <p>I study how big brands actually sell, and I write from the same place: <strong>copy is a sales conversation, not a writing exercise.</strong></p>
+        <p>I'm early in my client work, which means every project gets the attention a 7–8 figure account would get from someone still proving it.</p>
+        <div class="about-tags">
+          <span class="tag">Eugene Schwartz</span>
+          <span class="tag">Kim Krause Schwalm</span>
+          <span class="tag">Dave Trott</span>
+          <span class="tag">Cialdini</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">How I Think</div>
+      <h2>My strategic process.</h2>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-item">
+        <div class="process-index">01</div>
+        <div><h3>Analyze the Market</h3><p>A real audit of the audience, competitors, and awareness level — where the customer's head is at before a word gets written.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-index">02</div>
+        <div><h3>Craft the Strategy</h3><p>Positioning, messaging hierarchy, and the psychological hooks that actually apply to this brand — not a generic playbook.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-index">03</div>
+        <div><h3>Write & Iterate</h3><p>Copy built on mechanism and lead type, then refined against how it actually reads and performs.</p></div>
+      </div>
+      <div class="process-item">
+        <div class="process-index">04</div>
+        <div><h3>Document & Scale</h3><p>What works gets systematized so the next piece of copy starts from a stronger place than the last.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="loom">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">A Quick Video</div>
+      <h2>Hear from me.</h2>
+    </div>
+    <a href="https://www.loom.com/share/dfc70fb0a57b47728182f1b6f89e05ee" target="_blank" rel="noopener" class="loom-box reveal" style="text-decoration:none; cursor:pointer; display:block;">
+      <p style="margin-bottom:14px;">▶ Watch my short intro on Loom</p>
+      <p style="font-size:11px; opacity:0.7;">Opens in a new tab</p>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Work samples & breakdowns.</h2>
+    </div>
+    <div class="work-list reveal">
+      <div class="work-item">
+        <span class="work-tag">Email</span>
+        <div class="work-body">
+          <h3>Liquid I.V. Welcome Sequence</h3>
+          <p>Email built around hydration-science awareness and habit-formation hooks.</p>
+        </div>
+        <a href="https://drive.google.com/file/d/14img2eybOCB8h9lzlCAtB-NySBj5YOFx/view?usp=drivesdk" target="_blank" rel="noopener" class="work-link">Read it →</a>
+      </div>
+      <div class="work-item">
+        <span class="work-tag">Ad</span>
+        <div class="work-body">
+          <h3>Home Workout App — TikTok UGC Script</h3>
+          <p>UGC script structured as a condensed VSL — identity hook, blame shift, and proof before the pitch.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/198gWity3iMAshza3hM2OjLO-HQ8be8kLRzZIiTlIQBE/edit?usp=drivesdk" target="_blank" rel="noopener" class="work-link">Read it →</a>
+      </div>
+      <div class="work-item">
+        <span class="work-tag">Ad</span>
+        <div class="work-body">
+          <h3>BurnX Rope — Facebook Ad</h3>
+          <p>UGC-style Facebook ad written for a busy, gym-averse buyer using a specific, disqualifying product detail.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/17ph2icPPKp1CJ6M2iJCJflMB1gKwtY5IrjC9jTItnXU/edit?usp=drivesdk" target="_blank" rel="noopener" class="work-link">Read it →</a>
+      </div>
+      <div class="work-item">
+        <span class="work-tag">Ad</span>
+        <div class="work-body">
+          <h3>BioFlora — Meta Ad</h3>
+          <p>Long-form native ad for a Level 2–3 aware buyer, reframing the problem around mechanism instead of guilt.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/15BbTUfDALOZvi_eXR3poPXe2vz-Lp9_uOmbFM1BXpdI/edit?usp=drivesdk" target="_blank" rel="noopener" class="work-link">Read it →</a>
+      </div>
+      <div class="work-item">
+        <span class="work-tag">Landing Page</span>
+        <div class="work-body">
+          <h3>Primal Herbs — Sales Page</h3>
+          <p>Full landing page reframing the problem away from aging, with a tiered offer built for immediate conversion.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/18J6RQdHa8eoL_Ce5-RTtQvd6Hr2NuRWDERv-4aDuh9k/edit?usp=drivesdk" target="_blank" rel="noopener" class="work-link">Read it →</a>
+      </div>
+      <div class="work-item">
+        <span class="work-tag">Breakdown</span>
+        <div class="work-body">
+          <h3>Brand Teardown: Happy Mammoth</h3>
+          <p>Breakdown of their positioning, mechanism, and lead type.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/1CJ0mCGJen9U8G_2jeIJsOKaAV9dOVXRxvUHl2j_waco/edit?usp=drivesdk" target="_blank" rel="noopener" class="work-link">Read it →</a>
+      </div>
+      <div class="work-item">
+        <span class="work-tag">Breakdown</span>
+        <div class="work-body">
+          <h3>Ad Breakdown: PiPi Tea</h3>
+          <p>Breakdown of awareness level, mechanism, and lead type behind the ad.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/1q1X2sSWZhvSDivX2lrpFAluRW64nkkT06O_8LNQBU20/edit?usp=drivesdk" target="_blank" rel="noopener" class="work-link">Read it →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="wrap">
+    <h2>Ready to write copy that <em>actually sells?</em></h2>
+    <p>I'm taking on a small number of projects right now — let's see if we're a fit.</p>
+    <a href="mailto:israelolumuyiw@gmail.com" class="cta-button">Let's Talk →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+    <span>Israel Olumuyiwa — Lagos, Nigeria</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
